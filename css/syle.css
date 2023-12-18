@@ -1,0 +1,99 @@
+/************************
+    section 2 CSS
+*************************/
+@import url("./reset.css");
+:root{
+    --theme--bg--color:  #250337;
+    --header--bg--color: #000000;
+    --list--bg--color:#b2bec3;
+    --text--color:rgb(255, 254, 254);
+    --text--letter--default:#222;
+    --h1--color--part1: #930e0e;
+    --h1--color--part2: red;
+}
+/*header*/
+header{
+    background-color: var(--header--bg--color);
+    margin-bottom: 5rem;
+}
+
+header>h1{
+    text-align: center;
+    color: var(--h1--color--part1);
+    line-height: 6.5rem;
+}
+header>h1>span{
+    color: var(--h1--color--part2);
+}
+
+/*main*/
+
+figure{
+    max-width: 90rem;
+    margin: 0 auto;
+    border: solid 1rem #fff;
+    background-color: #000000;
+    color: var(--text--color);
+    border-radius: 1rem;
+}
+figure>img{
+    width: 100%;
+    display: inline-block;
+}
+figure figcaption ul.list-series{
+    line-height: 6rem;
+}
+figure figcaption ul.list-series li{
+    padding: .5rem;
+}
+figure figcaption ul.list-series li:nth-child(2n+1)/*1 sur 2 à partir du 1er élément*/{
+    background-color: var(--list--bg--color);
+}
+/*détail de la série*/
+
+details{
+    background-color: var(--list--bg--color);
+}
+
+details summary{
+    line-height: 6rem;
+    padding-left: .5rem;
+}
+
+details p{
+    padding: 0.5rem;    
+}
+
+/*footer*/
+
+footer *{
+    text-align: center;
+    color: var(--text--color);
+    line-height: 6.5rem;
+}
+/* media queris*/
+@media screen and (max-width: 90rem) {
+    figure figcaption ul{
+        line-height: 3.5rem;
+    }
+    details p {
+        text-align: justify;
+    }
+}
+@media screen and (min-width: 80rem){
+figure figcaption ul{
+    line-height: 6rem;
+}
+details p {
+    text-align: left;
+}
+}
+@media screen and (min-width: 100rem){
+figure figcaption ul{
+    line-height: 6rem;
+}
+details p {
+    text-align: left;
+}
+}
+    
